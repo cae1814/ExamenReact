@@ -89,6 +89,7 @@ export const HookExamen = () => {
         event.preventDefault();
         const url = "https://api.escuelajs.co/api/v1/categories/"+jid;
         const resultApi = await axios.delete(url);
+        
         setResult(await resultApi.data);
         alertReactCrud("La categoria "+jname+" fue borrada exitosamente.", 'success');
         getCategories();
